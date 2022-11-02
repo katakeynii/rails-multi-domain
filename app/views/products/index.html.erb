@@ -1,0 +1,18 @@
+<div class="shop-container">
+    <h1> <%= @shop.name %> </h1>
+    <h4> <%= @shop.tagline%> </h4>
+    <div> <%= @shop.phone_number %> </div>
+</div>
+
+<div class="products-container">
+    <% @shop.products.each do |product| %>
+        <div class="product">
+            <div>
+                <strong> Nom:  </strong> <%= product.name %>
+            </div>
+            <div>
+                <strong> Prix:  </strong> <%= product.price %>
+            </div>
+        </div>
+    <% end %>
+</div>
